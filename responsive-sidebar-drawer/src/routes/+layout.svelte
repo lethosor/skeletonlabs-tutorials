@@ -16,20 +16,17 @@
 	function drawerOpen(): void {
 		drawerStore.open({});
 	}
-
-	// Reactive Properties
-	$: classesSidebarLeft = $page.url.pathname === '/' ? 'w-0' : 'w-0 lg:w-64';
 </script>
 
 <!-- Drawer -->
-<Drawer>
+<Drawer width="auto">
 	<h2 class="p-4">Navigation</h2>
 	<hr />
 	<Navigation />
 </Drawer>
 
 <!-- App Shell -->
-<AppShell slotSidebarLeft="bg-surface-500/5 {classesSidebarLeft}">
+<AppShell slotSidebarLeft="bg-surface-500/5 w-0 lg:w-64">
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
 		<AppBar>
