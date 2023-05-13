@@ -55,5 +55,7 @@
 		<Navigation />
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	<slot />
+	<div class="container p-10 space-y-4">
+		<slot />
+	</div>
 </AppShell>
